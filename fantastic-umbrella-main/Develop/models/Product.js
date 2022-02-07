@@ -32,7 +32,7 @@ Product.init(
     },
     //creating the column for stock
    stock: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
       validates: {
@@ -41,7 +41,7 @@ Product.init(
     },
     //this will create the column for the category id
     category_id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "category",
         key: "id"
