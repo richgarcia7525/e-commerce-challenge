@@ -15,7 +15,7 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      aitoIncrement: true
+      autoIncrement: true
     },
     //this will be the column that will hold the product name
     product_name: {
@@ -31,7 +31,7 @@ Product.init(
       }
     },
     //creating the column for stock
-    stock: {
+   stock: {
       type: DataTypes.INTERGER,
       allowNull: false,
       defaultValue: 10,
