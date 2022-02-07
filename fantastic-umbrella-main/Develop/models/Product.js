@@ -10,7 +10,26 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
-  },
+    //this will be the id column
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      aitoIncrement: true
+    },
+  //this will be the column that will hold the product name
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    //this will be the column for price
+    price: {
+      type: DataTypes.DECIMAL(10,2),
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
+    }
   {
     sequelize,
     timestamps: false,
